@@ -26,4 +26,5 @@ function App() {
 export default App;
 
 
-// 
+// https://www.omdbapi.com/?apikey=28b29b1d&s=Star
+// https://www.omdbapi.com/?apikey=28b29b1d&s=them&page=1

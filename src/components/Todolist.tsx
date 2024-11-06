@@ -10,11 +10,29 @@ interface Props {
 
 const Todolist: React.FC<Props> = ({todos, setTodos}: Props) => {
   return (
-    <div className='todos'>
-      {todos.map((todo) => (
-        <Singletodo key={todo.id} todo={todo} todos={todos} setTodos = {setTodos} />
-      ))}
+    <div className="container">
+      <div className="todos">
+        <span className="todos__heading">Active Tasks</span>
+        {
+          todos.map((todo) => (
+            <Singletodo todo={todo} todos={todos} key={todo.id} setTodos={setTodos} />
+          ))
+        }
+      </div>
+      <div className="todos remove">
+        <span className="todos__heading">Completed Tasks</span>
+        {
+          todos.map((todo) => (
+            <Singletodo todo={todo} todos={todos} key={todo.id} setTodos={setTodos} />
+          ))
+        }
+      </div>
     </div>
+    // <div className='todos'>
+    //   {todos.map((todo) => (
+    //     <Singletodo key={todo.id} todo={todo} todos={todos} setTodos = {setTodos} />
+    //   ))}
+    // </div>
   )
 }
 
